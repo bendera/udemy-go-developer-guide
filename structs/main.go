@@ -6,6 +6,7 @@ type contactInfo struct {
 	email   string
 	zipCode int
 }
+
 type person struct {
 	firstName string
 	lastName  string
@@ -22,12 +23,13 @@ func main() {
 		},
 	}
 
-	jim.updateName("John")
+	jimPointer := &jim
+	jimPointer.updateName("John")
 	jim.print()
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (p *person) updateName(newFirstName string) {
+	(*p).firstName = newFirstName
 }
 
 func (p person) print() {
