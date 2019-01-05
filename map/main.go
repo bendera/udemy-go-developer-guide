@@ -9,7 +9,9 @@ func main() {
 		"blue":  "#0000ff",
 	} */
 
-	var colors map[string]string
+	colors := make(map[string]string)
+
+	colors["white"] = "#ffffff"
 
 	fmt.Println(colors)
 }
