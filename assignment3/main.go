@@ -19,7 +19,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	os.Stdout.WriteString("asdfasf")
-
 	io.Copy(os.Stdout, file)
 }
